@@ -1,10 +1,16 @@
-# React Native Progress Bar
+# React Native Alert Component
 A beautifully designed and responsive inline Alert component made with React Native for iOS and Android mobile and Tablet components.
 
-<hr />
-
-## Demo
-Try it out here: 
+<div style="display: flex; gap: 1rem; flex-direction: column; flex-wrap: wrap; justify-content: center;">
+    <div>
+        <h3>Dark Theme</h3>
+        <img src="https://github.com/Prakshal-Jain/Continuity-Open-Source/blob/main/react-native-alert-component/dark.png?raw=true" width="40%" style="border-radius: 10px;" />
+    </div>
+    <div>
+        <h3>Light Theme</h3>
+        <img src="https://github.com/Prakshal-Jain/Continuity-Open-Source/blob/main/react-native-alert-component/light.png?raw=true" width="40%" style="border-radius: 10px;" />
+    </div>
+</div>
 
 <hr />
 
@@ -35,11 +41,11 @@ import AlertComponent from 'react-native-alert-component';
 <hr/>
 
 ## Properties (Props)
-- <b>stepCount</b> (Integer): This property indicates the total number of steps in the progress bar.
+- <b>type</b> ('message' | 'warning' | 'error'): This property indicates if the alert is a message, warning, or an error. Each type is identified with a different color and icon. By default, `type = "message"`
 
-- <b>currStep</b> (Integer): This property specifies the current step of the progress bar that will be filled with color.
+- <b>message</b> (JSX element | string): This property specifies the message to display in the alert.
 
-- <b>colorScheme</b> ('light' | 'dark'): This property sets the color scheme of the progressbar to either light or dark. To get the device's default color scheme, you can use the useColorScheme hook (https://reactnative.dev/docs/usecolorscheme).
+- <b>colorScheme</b> ('light' | 'dark'): This property sets the color scheme of the progressbar to either light or dark. To get the device's default color scheme, you can use the useColorScheme hook (https://reactnative.dev/docs/usecolorscheme). By default, `colorScheme = 'light'`
 
 
 <hr />
@@ -48,29 +54,21 @@ import AlertComponent from 'react-native-alert-component';
 ```
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, View, Text } from 'react-native';
-import ProgressBar from 'progressbar-react-native';
+import AlertComponent from "react-native-alert-component";
+
 
 export default function App() {
   return (
-    <SafeAreaView style={{ backgroundColor: '#000', flex: 1, alignItems: 'center' }}>
-      <View style={{ padding: 10 }}>
-        <ProgressBar stepCount={3} currStep={2} colorScheme="dark" />
+    <SafeAreaView style={{ backgroundColor: '#fff', flex: 1, alignItems: 'center' }}>
+      <View>
+        <Text style={{ fontSize: 24, color: '#000', paddingVertical: 15, fontWeight: 'bold' }}>
+          React Native Alert Component
+        </Text>
       </View>
       <View style={styles.container}>
-        <Text style={{ fontSize: 20, color: '#fff' }}>
-          Step 2
-        </Text>
-      </View>
-
-      <View style={[styles.container, { backgroundColor: '#28282B', padding: 10 }]}>
-        <Text style={{ fontSize: 25, color: '#fff' }}>
-          progressbar-react-native
-        </Text>
-      </View>
-      <View style={[styles.container, { backgroundColor: '#28282B', padding: 10 }]}>
-        <Text style={{ fontSize: 18, color: '#fff' }}>
-          Dark Theme
-        </Text>
+        <AlertComponent message="This is a simple message." colorScheme="light" type="message" />
+        <AlertComponent message="This is a warning message." colorScheme="light" type="warning" />
+        <AlertComponent message="This is an error message." colorScheme="light" type="error" />
       </View>
       <StatusBar style="light" />
     </SafeAreaView>
@@ -106,6 +104,6 @@ You can join our Discord Community at https://discord.gg/TwJ863WJsQ to connect w
 
 Thank you 🎉
 <div>
-    <img src="https://continuitybrowser.com/assets/logo-dark.png" style="width: 5rem; height: auto;" />
+    <img src="https://github.com/Prakshal-Jain/Continuity-Open-Source/blob/main/react-native-alert-component/logo.png?raw=true" width="20%" style="border-radius: 10px;" />
 </div>
 Continuity Browser Team ❤️

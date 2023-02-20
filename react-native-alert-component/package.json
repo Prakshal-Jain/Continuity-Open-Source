@@ -1,0 +1,43 @@
+{
+  "name": "react-native-alert-component",
+  "version": "1.0.5",
+  "description": "Alert component for react native to display messages, warnings, and errors with light and dark theme support.",
+  "main": "AlertComponent.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prakshal-Jain/Continuity-Open-Source.git#main"
+  },
+  "keywords": [
+    "alert",
+    "component",
+    "react",
+    "react-native",
+    "ios",
+    "android",
+    "web",
+    "frontend",
+    "ui",
+    "notification",
+    "warning",
+    "error",
+    "message",
+    "dialog",
+    "modal",
+    "toast",
+    "theme",
+    "how"
+  ],
+  "author": "Prakshal Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prakshal-Jain/Continuity-Open-Source/issues"
+  },
+  "homepage": "https://github.com/Prakshal-Jain/Continuity-Open-Source/tree/main#readme",
+  "dependencies": {
+    "react-native": "0.70.5",
+    "react-native-vector-icons": "^9.2.0"
+  }
+}

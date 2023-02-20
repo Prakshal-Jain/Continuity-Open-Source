@@ -1,6 +1,6 @@
 {
   "name": "progressbar-react-native",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Progress Bar component for React Native.",
   "main": "ProgressBar.js",
   "scripts": {
@@ -26,6 +26,10 @@
     "steps",
     "multiple"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prakshal-Jain/Continuity-Open-Source/tree/main/progressbar-react-native"
+  },
   "author": "Prakshal Jain",
   "license": "ISC",
   "dependencies": {
